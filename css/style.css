@@ -46,6 +46,7 @@
 .btn-square {
     width: 38px;
     height: 38px;
+    
 }
 
 .btn-sm-square {
@@ -249,16 +250,109 @@
 }
 
 
-/*** About ***/
-.about-bg {
-    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
-    background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
-    background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
-    background-image: -o-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
-    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
-    background-size: 5px 5px;
+/*** Mission, Strategy and Strategy ***/
+.mission-strategy-vision .container {
+    padding: 100px 0;
 }
 
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mission,
+.vision,
+.strategy {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.mission::before,
+.vision::before,
+.strategy::before {
+    content: '';
+    position: absolute;
+    top: -30px; /* Adjust this value to fit your design */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    border-top: 6px solid #ccc;
+    margin-top: -10px;
+}
+
+.mission img,
+.vision img,
+.strategy img {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mission h3,
+.vision h3,
+.strategy h3 {
+    color: #333;
+}
+
+
+.mission p,
+.vision p,
+.strategy p {
+    color: #666;
+}
+
+.divider {
+    margin-top: 20px;
+    border-top: 6px solid #ccc;
+}
+
+img {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    display: block; /* Ensures the image behaves as a block element */
+    margin: 0 auto; /* Centers the image horizontally */}
+
+  /* Or using a class selector */
+.mission_icon {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    display: block; /* Ensures the image behaves as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.read-more {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
 
 /*** Gallery ***/
 h1.text-center.mb-5.wow.fadeIn {
@@ -299,14 +393,6 @@ h5.text-center.mb-5.wow.fadeInUp {
     transform: scale(1.1);
 }
 
-
-
-
-
-/*** Job Listing ***/
-.nav-pills .nav-item .active {
-    border-bottom: 2px solid var(--primary);
-}
 
 /*** Testimonial ***/
 .testimonial-carousel .owl-item .testimonial-item,
@@ -496,9 +582,6 @@ button {
     display: table;
     clear: both;
 }
-
-
-
 
   /* Style to arrange elements in one line */
 .checkbox-label {
